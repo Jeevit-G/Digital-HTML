@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:slnt,wght@-5,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:wght@300;400;500&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+}
+
+
+body {
+    background-color: black;
+    color: white;
+    height: 100%;
+}
+
+.left {
+    width: 25vw;
+    padding: 10px;
+}
+
+.right {
+    width: 75vw;
+}
+
+.home ul li {
+    width: 23px;
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    padding-top: 14px;
+    font-weight: bold;
+}
+
+.heading {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    padding-top: 14px;
+    padding: 23px 14px;
+    font-weight: bold;
+    align-items: center;
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.heading img {
+    width: 25px;
+}
+
+.library {
+    min-height: 80vh;
+    position: relative;
+    border-radius: 50px;
+
+}
+
+.footer {
+    display: flex;
+    font-size: 12px;
+    color: grey;
+    gap: 12px;
+    position: absolute;
+    bottom: 12px;
+    margin: 32px 0;
+    padding: 10px 0;
+    border-radius: 50px;
+}
+
+.footer a {
+    color: grey;
+}
+
+.right {
+    margin: 16px 0;
+    position:relative;
+}
+
+    .header {
+        width: 100%;  /* Ensure it takes the full width */
+        padding: 0 20px;  /* Adjust padding as needed */
+        box-sizing: border-box;  /* Include padding in the element's total width */
+        position: fixed;  /* Optional: If you want the header to stay fixed at the top */
+        top: 0;  /* Position it at the top */
+        left: 0;  /* Ensure it aligns with the left edge */
+        right: 0;  /* Ensure it aligns with the right edge */
+        z-index: 1000;  /* Optional: Ensure it stays above other content */
+        justify-content: flex-start;
+        border-radius: 15px;
+        height: 70px;
+        align-items: center;
+        display: flex;
+        background-color: rgb(0, 0, 0);
+    }
+    
+
+.header>* {
+    padding: 20px;
+}
+
+.spotifyPlaylists {
+    padding: 16px;
+}
+
+.cardContainer {
+    margin: 30px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;    
+    overflow: auto;
+    max-height: 70vh;
+    flex-grow:1;
+}
+
+.card {
+    width: 200px;
+    padding: 10px;
+    border-radius: 4px;
+    background-color: rgb(18,18,18);
+    position: relative;
+
+}
+.card:hover{
+    background-color:#202020;
+}
+
+.card>* {
+    padding-top: 10px;
+}
+
+.card:hover .play {
+    opacity: 1;
+}
+
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 100px;
+}
+
+.play {
+    width: 40px;
+    height: 40px;
+    background-color: #1fdf64;
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 168px;
+    right: 17px;
+    opacity: 0;
+    transition: all 0.1s ease-out;
+
+}
+
+.buttons>* {
+    margin: 0 12px;
+
+
+}
+
+.signupbtn {
+    background-color: rgb(0, 0, 0);
+    color: rgb(82, 82, 82);
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+.signupbtn:hover {
+    font-size: 1.01rem;
+    color: white;
+    font-size: 17px;
+}
+
+.lgnbtn {
+    background-color: white;
+    border-radius: 21px;
+    color: black;
+    padding: 10px;
+    width: 90px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+}
+
+.lgnbtn:hover {
+    font-weight: bold;
+    font-size: 17px
+}
+.playbar {
+position: fixed;
+bottom: 0; /* Aligns it at the very bottom */
+background-color: rgb(0, 0, 0);
+width: 100%;
+padding: 12px;
+left: 50%;
+transform: translateX(-50%);;
+border-radius: 3px;
+}
+.songbuttons{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    height: 50px;
+}
+
+.svg{
+fill:none;
+align-items: center;
+stroke-width: 3;
+}
+/* Style for the Search Bar */
+.searchbar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #9AB5D9;
+    border-radius: 25px;
+    padding: 8px 12px;
+    width: 70%; /* Set width to a percentage for responsiveness */
+    max-width: 500px; /* Increase the maximum width to 800px */
+    margin: 20px auto; /* Centers the search bar */
+    
+}
+
+.searchbar input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    width: 100%; /* Ensure the input stretches to the full width */
+    padding: 8px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+
+.searchbar input::placeholder {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.searchbar input:focus {
+    background-color: #9AB5D9;
+}
+
+.searchbar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    transition: transform 0.2s ease;
+}
+
+.searchbar button:hover {
+    transform: scale(1.1);
+}
+
+.searchbar button img {
+    width: 20px;
+    height: 20px;
+    fill: #bbb;
+}
+
+.searchbar button:focus img {
+    fill: #1fdf64;
+}
+h2{
+    font-size: 20px;
+}
+.header {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    justify-content: flex-start;
+    border-radius: 15px;
+    height: 70px;
+    align-items: center;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+}
+
+.header .search-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 70%;
+    max-width: 500px;
+    justify-content: space-between;
+}
+
+
+.home-btn {
+    background-color: #1f1f1f;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-left: 250px;
+}
+
+.home-btn svg {
+    width: 24px;
+    height: 24px;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+}
+
+.home-btn:hover {
+    transform: scale(1.1);
+}
+
+.home-btn:hover svg {
+    stroke: #1DB954; /* Spotify green */
+}
+
+/* Optional: Remove the default image filter from home button */
+.home-btn img {
+    filter: none;
+}
+.square {
+    width: 200px;
+    padding: 10px;
+    background-color: rgb(18,18,18);
+    position: relative;
+
+}
+.square:hover{
+    background-color:#202020;
+}
+
+.square>* {
+    padding-top: 10px;
+}
+
+.square:hover .play {
+    opacity: 1;
+}
+
+
+.square img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 100px;
+}
+
+.play:hover {
+    transition: 0.1 ;
+}
+
+
+.border{
+    border: 2px solid red;
+    margin: 3px;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify center{
+    justify-content: center;
+}
+
+.items-center{
+    align-items: center;
+}
+
+.bg-black{
+    background-color: black;
+    color: white;
+}
+
+.invert{
+    filter: invert(1);
+}
+
+.bg-grey{
+    background-color: #121212;
+}
+
+.rounded{
+    border-radius: 7px;
+}
+
+.m-1{
+    margin: 5px;
+}
+
+.p-1{
+    padding: 14px;
+}
+/* Style the scrollbar */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+    height: 10px; /* Height of the horizontal scrollbar */
+  }
+  
+  /* Track (background) of the scrollbar */
+  ::-webkit-scrollbar-track {
+    background: #2c2c2c; /* Dark background */
+    border-radius: 10px; /* Rounded corners for the track */
+  }
+  
+  /* Handle (thumb) of the scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background: #555; /* Dark thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #888; /* Lighter thumb color on hover */
+  }
